@@ -1,0 +1,39 @@
+<h3>Angular 2 forms</h3>
+<div class="container">
+    <form>
+        <rating [(ngModel)]="rate" name="rate" ></rating>
+
+ <br>
+ {{rate}}
+        <br>
+        <datepicker name="startDate" [(ngModel)]="startDate" [showWeeks]="false" ></datepicker>
+    <timepicker [(ngModel)]="mytime" name="mytime"></timepicker>
+
+
+<button type="button" class="btn"
+        [class.btn-primary]="singleModel === 'on'"
+        [(ngModel)]="singleModel" name="singleModel" btnCheckbox
+        btnCheckboxTrue="on" btnCheckboxFalse="off">
+  {{singleModel}}
+</button>
+
+<br>
+<div class="btn-group">
+  <label class="btn btn-primary" name="radioModel" [(ngModel)]="radioModel"
+         btnRadio="Left">Left</label>
+  <label class="btn btn-primary" name="radioModel" [(ngModel)]="radioModel" btnRadio="Middle">Middle</label>
+  <label class="btn btn-primary" name="radioModel" [(ngModel)]="radioModel"
+         btnRadio="Right">Right</label>
+</div>
+
+    </form>
+    <br>
+    radioModel {{radioModel}}
+    <br>
+  startDate  {{startDate}}
+  <br>
+  mytime {{mytime}}
+  <br>
+singleModel {{singleModel}}
+
+</div>
